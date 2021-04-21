@@ -1,2 +1,2 @@
 # CS-GO-web
-This is a Counter Strike Form with responsive layout
+This is a Counter Strike Lobby with responsive layout

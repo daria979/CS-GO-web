@@ -5,8 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter Strike</title>
+
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="app.js" defer></script>
+    <script src="user_age.js" defer></script>
+    <script src="maps.js" defer></script>
+    <script src="gender_selector.js" defer></script>
+    <script src="button_effect.js" defer></script>
+    <script src="generate_character.js" defer></script>
 </head>
 <body>
-    
+    <div class="parent">
+        <!-- <div class="div1">div1 </div> -->
+        <div class="div2">
+            <p id="clock"></p>
+        </div>
+        <div class="div3"></div>
+        <div class="div4">
+            <form id="my_form">
+        
+                <!-- Nickname -->
+                <div class="label_pic">
+                  <!-- <img class="grenada" src="Pictures/grenada_crown.png"> -->
+                  <label class="label">Type your nickname:</label>
+                </div>
+                <input class="inputuri_design" type="text" id="user_name" placeholder="Insert your nickname" >
+        
+                <!-- Birthdate -->
+                <div class="label_pic">
+                  <!-- <img class="grenada" src="Pictures/grenada_crown.png"> -->
+                  <label class="label">Insert your birthdate:</label>
+                </div>
+        
+                <input class="inputuri_design" type="date" id="user_date_of_birth" >
+                <!-- Map selection -->
+
+                <div class="label_pic">
+                  <!-- <img class="grenada" src="Pictures/grenada_crown.png"> -->
+                  <label class="label">Select your favorite maps:</label><br>
+                </div>
+                
+                <input type="checkbox" id="map1" name="map" value="Cobblestone" >
+                <label for="map1" class="Maps">Cobblestone</label><br>
+
+                <input type="checkbox" id="map2" name="map" value="Inferno" >
+                <label for="map2" class="Maps">Inferno</label><br>
+
+                <input type="checkbox" id="map3" name="map" value="Mirage" >
+                <label for="map3" class="Maps">Mirage</label><br>
+
+                <input type="checkbox" id="map4" name="map" value="Nuke" >
+                <label for="map4" class="Maps">Nuke</label><br>
+
+                <input type="checkbox" id="map5" name="map" value="Train" >
+                <label for="map5" class="Maps">Train</label><br>
+
+                <input type="checkbox" id="allmap" name="map" value="map_all" >
+                <label for="allmap" class="Maps">All Maps</label><br><br>
+                
+                <!-- Team selection - Radio -->
+                <div class="label_pic">
+                  <!-- <img class="grenada" src="Pictures/grenada_crown.png"> -->
+                  <label class="label">Choose team:</label>
+                </div>
+                
+                <input type="radio" name="teams" value="antiterro" onchange="Gender()">
+                <label for="antiterro">Counter-Terrorist</label><br>
+                <input type="radio" name="teams" value="terro" onchange="Gender()">
+                <label for="terro">Terrorist</label>
+                <br><br>
+                
+                <!-- Gender selector -->
+                <div class="label_pic">
+                  <!-- <img class="grenada" src="Pictures/grenada_crown.png"> -->
+                  <label class="label">Character`s skin:</label><br>
+                </div>
+                
+                <select  name="gender" class="inputuri_design" id="select_gender" >
+                    <option id="male" value="male">Male</option>
+                    <option id="female" value="female">Female</option>
+                </select><br><br>
+                <!--onclick="this.disabled=true, GenerateCharacter()"-->
+                <button id="button_submit" onclick="GenerateCharacter()"><b>Generate character</b></button>
+              </form>
+        </div>
+        <div class="div5"> </div>
+        <div class="div6"  id="getmaps"> </div>
+        <div class="div7">div7 </div>
+        <div class="div8">Output-uri </div>
+        <div class="div9">Poza caracter</div>
+    </div>
 </body>
 </html>

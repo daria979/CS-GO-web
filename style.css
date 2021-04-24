@@ -91,7 +91,7 @@ input[type=text],  input[type=date], select[type=radio]{
     height:25vh;
     border: 1px rgb(255, 60, 0) solid;
     padding: 5px;
-    box-shadow: 5px 10px darkorange;
+    box-shadow: 5px 5px darkorange;
     background-size:cover;
     background-repeat: no-repeat;
 }
@@ -168,12 +168,9 @@ input[type=text],  input[type=date], select[type=radio]{
 }
 
 .character{
-    width: 300px;
-    height:450px;
-    padding: 5px;
-    margin:0px;
-    background-size:80%;
     background-repeat: no-repeat;
+    background-size: contain;
+    width:70%;
 }
 
 /* add flash effect when click on submit button */
@@ -190,14 +187,28 @@ input[type=text],  input[type=date], select[type=radio]{
 
 /* outputs from js code*/
 #output{
-    padding-top:2.5rem;
+    margin-bottom:30px;
     font-size:2rem;
+    color:orange;
 }
 #output2{
-    font-size: 1rem;
+   font-size: 1rem;
+   display: inline-block;
+   color:white;
   }
-
-
+#output3{
+    font-size: 1rem;
+    display: inline-block;
+    color:white;
+   }
+#output_age{
+    font-size: 1rem;
+    color:white;
+    display: inline-block;
+    padding: 10px; 
+    background-color: orange;
+    border-radius: 20px;
+}
 
 input,label,select { 
     cursor: pointer; color:grey;

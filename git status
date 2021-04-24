@@ -1,0 +1,30 @@
+[33mcommit bb8c2e24ee30eb1e99d4bf848dbc2c729d77959f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 58e0f74 54435de
+Author: Daria Trip <daria.trip001@gmail.com>
+Date:   Wed Apr 21 03:53:43 2021 +0300
+
+    Merge branch 'main' of https://github.com/daria979/CS-GO-web
+
+[33mcommit 58e0f7479e3c31fe9fb2ae8be0dceb6d22345c11[m
+Author: Daria Trip <daria.trip001@gmail.com>
+Date:   Wed Apr 21 03:53:10 2021 +0300
+
+    redesigned website and form/added grid layout
+
+[33mcommit 54435de00e52a9a9920c8d35513fbc80eadb6b4e[m
+Author: Daria Trip <57574037+daria979@users.noreply.github.com>
+Date:   Sun Apr 18 12:42:12 2021 +0300
+
+    Update README.md
+
+[33mcommit b3b382eb6110cf7432538fe91bbab70cce7f6e1b[m
+Author: Daria Trip <daria.trip001@gmail.com>
+Date:   Sun Apr 18 12:12:02 2021 +0300
+
+    added some files: html, css, js
+
+[33mcommit d2dcebac89864d4d73abd5955ff09fb4a2e42322[m
+Author: Daria Trip <57574037+daria979@users.noreply.github.com>
+Date:   Sun Apr 18 12:02:05 2021 +0300
+
+    Initial commit

@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter Strike</title>
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" ></script>
+    <!-- CSS only -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="style.css">
 
@@ -15,6 +17,10 @@
     <script src="gender_selector.js" defer></script>
     <script src="button_effect.js" defer></script>
     <script src="generate_character.js" defer></script>
+   
+
+    <!-- JavaScript Bundle with Popper
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script> -->
 </head>
 <body>
     <div class="parent">
@@ -24,22 +30,21 @@
         </div>
         <div class="div3"></div>
         <div class="div4">
-            <form id="my_form">
+            <form id="my_form" name="theform" >
         
                 <!-- Nickname -->
                 <div class="label_pic">
                   <!-- <img class="grenada" src="Pictures/grenada_crown.png"> -->
                   <label class="label">Type your nickname:</label>
                 </div>
-                <input class="inputuri_design" type="text" id="user_name" placeholder="Insert your nickname" >
+                <input class="inputuri_design" type="text" id="user_name" placeholder="Insert your nickname" onchange="check_name()" >
         
                 <!-- Birthdate -->
                 <div class="label_pic">
                   <!-- <img class="grenada" src="Pictures/grenada_crown.png"> -->
                   <label class="label">Insert your birthdate:</label>
                 </div>
-        
-                <input class="inputuri_design" type="date" id="user_date_of_birth" >
+                <input class="inputuri_design" type="date" id="user_date_of_birth" onchange="check_date()">
                 <!-- Map selection -->
 
                 <div class="label_pic">
@@ -47,58 +52,56 @@
                   <label class="label">Select your favorite maps:</label><br>
                 </div>
                 
-                <input type="checkbox" id="map1" name="map" value="Cobblestone" >
-                <label for="map1" class="Maps">Cobblestone</label><br>
+                <input type="checkbox" id="map1" name="map" value="Cobblestone" onchange="check_maps()">
+                <label for="map1" >Cobblestone</label><br>
 
-                <input type="checkbox" id="map2" name="map" value="Inferno" >
-                <label for="map2" class="Maps">Inferno</label><br>
+                <input type="checkbox" id="map2" name="map" value="Inferno"  onchange="check_maps()">
+                <label for="map2">Inferno</label><br>
 
-                <input type="checkbox" id="map3" name="map" value="Mirage" >
-                <label for="map3" class="Maps">Mirage</label><br>
+                <input type="checkbox" id="map3" name="map" value="Mirage"onchange="check_maps()">
+                <label for="map3">Mirage</label><br>
 
-                <input type="checkbox" id="map4" name="map" value="Nuke" >
-                <label for="map4" class="Maps">Nuke</label><br>
+                <input type="checkbox" id="map4" name="map" value="Nuke" onchange="check_maps()">
+                <label for="map4">Nuke</label><br>
 
-                <input type="checkbox" id="map5" name="map" value="Train" >
-                <label for="map5" class="Maps">Train</label><br>
+                <input type="checkbox" id="map5" name="map" value="Train"   onchange="check_maps()">
+                <label for="map5">Train</label><br>
 
-                <input type="checkbox" id="allmap" name="map" value="map_all" >
-                <label for="allmap" class="Maps">All Maps</label><br><br>
+                <input type="checkbox" id="allmap" name="map" value="map_all"  onchange="check_maps()">
+                <label for="allmap">All Maps</label><br><br>
                 
                 <!-- Team selection - Radio -->
                 <div class="label_pic">
                   <!-- <img class="grenada" src="Pictures/grenada_crown.png"> -->
-                  <label class="label">Choose team:</label>
+                  <label class="label">Choose a team:</label>
                 </div>
                 
-                <input type="radio" name="teams" value="antiterro" onchange="Gender()">
+                <input type="radio" name="teams" value="antiterro" onchange="Gender(); check_teams()" >
                 <label for="antiterro">Counter-Terrorist</label><br>
-                <input type="radio" name="teams" value="terro" onchange="Gender()">
+                <input type="radio" name="teams" value="terro" onchange="Gender();check_teams()">
                 <label for="terro">Terrorist</label>
                 <br><br>
                 
                 <!-- Gender selector -->
                 <div class="label_pic">
                   <!-- <img class="grenada" src="Pictures/grenada_crown.png"> -->
-                  <label class="label">Character`s skin:</label><br>
+                  <label class="label">Available skins:</label><br>
                 </div>
                 
-                <select  name="gender" class="inputuri_design" id="select_gender" >
-                    <option id="male" value="male">Male</option>
-                    <option id="female" value="female">Female</option>
+                <select  name=gender class="inputuri_design" id="select_gender" onchange="check_gender()">
+                    <option id="male" value="male"  >Male</option>
+                    <option id="female" value="female" >Female</option>
                 </select><br><br>
                 <!--onclick="this.disabled=true, GenerateCharacter()"-->
-                <button id="button_submit" onclick="GenerateCharacter()"><b>Generate character</b></button>
+                <button id="button_submit"  onclick="GenerateCharacter();check_submit()"><b>Generate character</b></button>
               </form>
         </div>
         <div class="div5"> </div>
         <div class="div6"  id="getmaps"> </div>
         <div class="div7"> </div>
         <div class="div8">
-          <h2 id ="output"></h2> 
-          <p id ="output2"></p> 
-          <p id ="output_age"></p> 
-          <p id="output3"></p> 
+          <h2 id ="hello"></h2> 
+          <p id ="age"></p> 
         </div>
         <div class="div9 character" id="character_image"></div>
     </div>

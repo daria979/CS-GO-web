@@ -12,10 +12,10 @@
   
   @-webkit-keyframes clock {
     from {
-      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px orangered, 0 0 20px orangered, 0 0 25px orangered, 0 0 30px orangered, 0 0 35px orangered;
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #743ad5, 0 0 20px #743ad5, 0 0 25px #743ad5, 0 0 30px #743ad5, 0 0 35px #743ad5;
     }
     to {
-      text-shadow: 0 0 10px #fff, 0 0 15px orange, 0 0 20px orange, 0 0 25px orange, 0 0 30px orange, 0 0 35px orange, 0 0 40px orange;
+      text-shadow: 0 0 10px #fff, 0 0 15px #d53a9d, 0 0 20px #d53a9d, 0 0 25px #d53a9d, 0 0 30px #d53a9d, 0 0 35px #d53a9d, 0 0 40px #d53a9d;
     }
    
   }
@@ -25,17 +25,23 @@
 #my_form{
     display:block;
     padding: 40px; 
-    background-color: #616161;
-    border-radius:20px;
-    height:80%;
-    border: 2px groove orange;
+    background-color: black;
     
+    height:80%;
+    border: 2px groove #F27405;
+    /* font-size:15px; */
+    /* border-width: 5px 3px 3px 5px;
+    border-radius:95% 4% 97% 5%/4% 94% 3% 95%; */
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #743ad5, #FF1CE3);
 }
 
 input[type=text],  input[type=date], select[type=radio]{
-    width:80%;
+    width:50%;
     border: none;
-    border-bottom: 1px solid white;
+    border-bottom: 0.1px solid white;
+    /* border-radius: 20px; */
     /* padding: 3%; */
     margin-bottom:8%;
     color:white;
@@ -44,14 +50,21 @@ input[type=text],  input[type=date], select[type=radio]{
 }
 
 .label{
-    color:orange;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#FF1CE3, #743ad5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.3vh;
     /* text-shadow:2px 2px 0.5px orange; */
 }
 ::-webkit-calendar-picker-indicator {
      background-color:white; 
      font-family: 'Inconsolata', monospace;
+     cursor: pointer;
     }
-
+    ::-webkit-calendar-picker-indicator:hover{
+        background-color:#743ad5;
+    }
 ::placeholder{
     color:white;
     font-family: 'Inconsolata', monospace;
@@ -63,14 +76,10 @@ input[type=text],  input[type=date], select[type=radio]{
     font-family: 'Inconsolata', monospace;
 }
 .inputuri_design{
-    background-color: rgb(20, 19, 19);
+    background-color:  black;
     top:10%;
     /* padding: 15px; */
     width: 60%;
-}
-.inputuri_design:after{
-    
-    font-family: 'Inconsolata', monospace;
 }
 
 /*adout data*/
@@ -82,18 +91,31 @@ input[type=text],  input[type=date], select[type=radio]{
 }
 #data_text{
     font-size:30px;
+    font-family: 'Inconsolata', monospace;
+}
+#user_date_of_birth{
+    width:50%;
 }
 
 /*Design maps*/
 
 .maps{
+    color:white;
     width:20%;
     height:25vh;
-    border: 1px rgb(255, 60, 0) solid;
+    /* border: 1px rgb(255, 60, 0) solid; */
+    margin:10px;
     padding: 5px;
-    box-shadow: 5px 5px darkorange;
+    /* border-radius: 20px ; */
+    box-shadow: 5px 5px linear-gradient(to left, #743ad5, #FF1CE3);
+    filter: drop-shadow(5px 5px 5px  #743ad5);
     background-size:cover;
     background-repeat: no-repeat;
+
+    /*border style*/
+    border-width: 3px 4px 3px 5px;
+    border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+    /* transform: rotate(2deg); */
 }
 #Cobblestone{
     background-image: url("Pictures/cbblestone.jpg");
@@ -124,16 +146,16 @@ input[type=text],  input[type=date], select[type=radio]{
     /* margin-left:40%; */
     width:100%;
     padding: 13px;
-    box-shadow:10px 5px 5px #ffa500;
-    border-radius:20px;
+    box-shadow:10px 5px 5px #FF1CE3;
+    /* border-radius:20px; */
     cursor: pointer;
-    color:rgb(20, 19, 19);
-    margin-top:15px;
+    color:#0a0a0a;
+   
 }
 #button_submit:hover {
-    background-color: orange;
+    background-color: #743ad5;
     color:white;
-    box-shadow:10px 5px 5px rgb(20, 19, 19);;
+    box-shadow:10px 5px 5px black;
   }
 
 /*Add molotov grenade as icon*/
@@ -186,10 +208,10 @@ input[type=text],  input[type=date], select[type=radio]{
   }
 
 /* outputs from js code*/
-#output{
+#hello{
     margin-bottom:30px;
     font-size:2rem;
-    color:orange;
+    color:#FF1CE3;
 }
 #output2{
    font-size: 1rem;
@@ -201,26 +223,35 @@ input[type=text],  input[type=date], select[type=radio]{
     display: inline-block;
     color:white;
    }
-#output_age{
+span{
     font-size: 1rem;
     color:white;
     display: inline-block;
     padding: 10px; 
-    background-color: orange;
+    background-color: #FF1CE3;
     border-radius: 20px;
 }
 
 input,label,select { 
-    cursor: pointer; color:grey;
+    cursor: pointer; 
 }
 
 .Maps,input,label,select,option{
     color:white;
 }
-.Maps:hover,input:hover,select[type=radio]:hover{
-    color:#14C6CC;
+
+/* .Maps:hover,input:hover,input[type=radio]:hover,#user_name:hover{
+    color:#03A6A6;
+} */
+#user_name{
+    padding:3.5px;
+    background-color: black;
+}
+#user_name:after{
+    background-color: black;
 }
 
+/*style checkbox*/
 
 
 

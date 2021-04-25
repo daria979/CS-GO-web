@@ -37,15 +37,10 @@ function DisplayAge() {
 
 function ShowTime(user_years) {
   
-  let text1 = "You have lost ";
-  let age = user_years+" years";
-  let text2 =" playing video games. " + "<br><br><br>"
-    
-    + "Now it`s time to make it real 👌"
-    ;
-  document.getElementById("output2").innerHTML = text1;
-  document.getElementById("output_age").innerHTML= age;
-  document.getElementById("output3").innerHTML = text2;
+  let age = "<span>" + user_years + " years"+"</span>";
+  let text2 =" playing video games. " + "<br><br><br> Now it`s time to make it real! 👌";
+  let element = "You have lost " + age + text2;
+  document.getElementById("age").innerHTML = element;
 }
 
 setInterval(DisplayAge, 1000);
